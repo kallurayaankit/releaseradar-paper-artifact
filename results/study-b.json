@@ -1,0 +1,61 @@
+{
+ "tasks": 4,
+ "starterCasesPerTask": 3,
+ "expandedCasesPerTask": 12,
+ "totals": {
+  "starter": 2,
+  "expanded": 12,
+  "eligibleHeldOut": 12,
+  "oraclePairs": 53421,
+  "disagreements": 0
+ },
+ "byTask": {
+  "discount": {
+   "starter": 2,
+   "expanded": 3,
+   "eligibleHeldOut": 3,
+   "oraclePairs": 20001,
+   "disagreements": 0
+  },
+  "tax": {
+   "starter": 0,
+   "expanded": 3,
+   "eligibleHeldOut": 3,
+   "oraclePairs": 5226,
+   "disagreements": 0
+  },
+  "refund": {
+   "starter": 0,
+   "expanded": 3,
+   "eligibleHeldOut": 3,
+   "oraclePairs": 15872,
+   "disagreements": 0
+  },
+  "eligibility": {
+   "starter": 0,
+   "expanded": 3,
+   "eligibleHeldOut": 3,
+   "oraclePairs": 12322,
+   "disagreements": 0
+  }
+ },
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "node",
+   "study-b/replay.mjs"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "study-b",
+    "sha256": "249e5a7ae3bd3b8d5dd36a9e5bac13851fda3b43e8112c54dfc4146b27397b22"
+   }
+  ],
+  "commit": "10a900d98efd623d805fea07f733dc4a53af3b1a",
+  "now": "2026-11-25T13:42:26+00:00",
+  "mode": "exploratory",
+  "study": "explore/replay.md",
+  "osaudit": "0.7.0"
+ }
+}

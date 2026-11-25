@@ -1,0 +1,45 @@
+{
+ "starter": {
+  "cases": 3,
+  "detected": 1,
+  "outcomes": {
+   "buggy": "missed",
+   "boundary": "detected",
+   "rounding": "missed"
+  }
+ },
+ "expanded": {
+  "cases": 6,
+  "detected": 3,
+  "outcomes": {
+   "buggy": "detected",
+   "boundary": "detected",
+   "rounding": "detected"
+  }
+ },
+ "variants": 3,
+ "correctAndFixedControlsPass": true,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "node",
+   "study-a/replay.mjs"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "study-a/fixture",
+    "sha256": "14fcf653a3afde14f9cdd10539df05fd0018183fbc5ddd9cc4be11924fc257d8"
+   },
+   {
+    "path": "study-a/replay.mjs",
+    "sha256": "5ca97d7fa89350fe2bfbcaea85ecacae35c8d70772b9856d6cff45a16f49b0e4"
+   }
+  ],
+  "commit": "10a900d98efd623d805fea07f733dc4a53af3b1a",
+  "now": "2026-11-25T13:42:26+00:00",
+  "mode": "exploratory",
+  "study": "explore/replay.md",
+  "osaudit": "0.7.0"
+ }
+}
