@@ -1,0 +1,17 @@
+schema = "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/audit-v1.json"
+
+[paper]
+pdf = "paper/ReleaseRadar_Feasibility_Preprint.pdf"
+md = ["paper/manuscript.md"]
+
+[results]
+files = ["results/study-a.json", "results/study-b.json"]
+instruments = ["study-a/*.mjs", "study-a/fixture/*.js", "study-b/*.mjs"]
+
+[[results.depends]]
+file = "results/study-a.json"
+instruments = ["study-a/replay.mjs", "study-a/fixture/checkout.js", "study-a/fixture/scenario.js", "study-a/fixture/challenge-core.js"]
+
+[[results.depends]]
+file = "results/study-b.json"
+instruments = ["study-b/replay.mjs", "study-b/evaluate.mjs", "study-b/oracle.mjs", "study-b/faults.mjs", "study-b/oracle-selftest.mjs", "study-b/result-audit.mjs"]

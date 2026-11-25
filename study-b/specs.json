@@ -1,0 +1,9 @@
+{
+ "version":"pilot-spec-v1","scope":"Four synthetic integer business rules; valid inputs only; not the 12-task full protocol; no AI comparison.",
+ "tasks":[
+  {"id":"discount","inputs":{"amount":"integer 0..20000 cents"},"rule":"If amount is at least 10000 cents, discount is floor(amount/10) cents; otherwise discount is zero. Return the discount cents only."},
+  {"id":"tax","inputs":{"amount":"integer 0..20000 cents","rate":"integer 0..2500 basis points"},"rule":"Return tax cents equal to amount*rate/10000 rounded to nearest integer, exact halves rounded upward. Inputs nonnegative; no tax cap, exemption or threshold."},
+  {"id":"refund","inputs":{"paid":"integer 0..20000 cents","refunded":"integer 0..paid cents","requested":"integer 0..20000 cents"},"rule":"Return refundable cents as the smaller of requested and paid minus refunded. Zero is permitted. No fees or minimum refund."},
+  {"id":"eligibility","inputs":{"age":"integer 0..100 years","tenure":"integer 0..60 completed months","suspended":"boolean"},"rule":"Return boolean true if and only if age is at least 18, tenure is at least 6, and suspended is false."}
+ ]
+}

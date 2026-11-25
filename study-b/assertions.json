@@ -1,0 +1,406 @@
+{
+  "discount": [
+    {
+      "id": "discount-1",
+      "input": {
+        "amount": 1000
+      },
+      "expected": 0
+    },
+    {
+      "id": "discount-2",
+      "input": {
+        "amount": 15000
+      },
+      "expected": 1500
+    },
+    {
+      "id": "discount-3",
+      "input": {
+        "amount": 0
+      },
+      "expected": 0
+    },
+    {
+      "id": "discount-4",
+      "input": {
+        "amount": 9999
+      },
+      "expected": 0
+    },
+    {
+      "id": "discount-5",
+      "input": {
+        "amount": 10000
+      },
+      "expected": 1000
+    },
+    {
+      "id": "discount-6",
+      "input": {
+        "amount": 10001
+      },
+      "expected": 1000
+    },
+    {
+      "id": "discount-7",
+      "input": {
+        "amount": 10009
+      },
+      "expected": 1000
+    },
+    {
+      "id": "discount-8",
+      "input": {
+        "amount": 10010
+      },
+      "expected": 1001
+    },
+    {
+      "id": "discount-9",
+      "input": {
+        "amount": 19999
+      },
+      "expected": 1999
+    },
+    {
+      "id": "discount-10",
+      "input": {
+        "amount": 20000
+      },
+      "expected": 2000
+    },
+    {
+      "id": "discount-11",
+      "input": {
+        "amount": 1
+      },
+      "expected": 0
+    },
+    {
+      "id": "discount-12",
+      "input": {
+        "amount": 5000
+      },
+      "expected": 0
+    }
+  ],
+  "tax": [
+    {
+      "id": "tax-1",
+      "input": {
+        "amount": 10000,
+        "rate": 1000
+      },
+      "expected": 1000
+    },
+    {
+      "id": "tax-2",
+      "input": {
+        "amount": 5000,
+        "rate": 2000
+      },
+      "expected": 1000
+    },
+    {
+      "id": "tax-3",
+      "input": {
+        "amount": 0,
+        "rate": 1000
+      },
+      "expected": 0
+    },
+    {
+      "id": "tax-4",
+      "input": {
+        "amount": 1,
+        "rate": 0
+      },
+      "expected": 0
+    },
+    {
+      "id": "tax-5",
+      "input": {
+        "amount": 1,
+        "rate": 2500
+      },
+      "expected": 0
+    },
+    {
+      "id": "tax-6",
+      "input": {
+        "amount": 2,
+        "rate": 2500
+      },
+      "expected": 1
+    },
+    {
+      "id": "tax-7",
+      "input": {
+        "amount": 3,
+        "rate": 2500
+      },
+      "expected": 1
+    },
+    {
+      "id": "tax-8",
+      "input": {
+        "amount": 20000,
+        "rate": 2500
+      },
+      "expected": 5000
+    },
+    {
+      "id": "tax-9",
+      "input": {
+        "amount": 19999,
+        "rate": 1
+      },
+      "expected": 2
+    },
+    {
+      "id": "tax-10",
+      "input": {
+        "amount": 10001,
+        "rate": 1000
+      },
+      "expected": 1000
+    },
+    {
+      "id": "tax-11",
+      "input": {
+        "amount": 9999,
+        "rate": 2500
+      },
+      "expected": 2500
+    },
+    {
+      "id": "tax-12",
+      "input": {
+        "amount": 20000,
+        "rate": 0
+      },
+      "expected": 0
+    }
+  ],
+  "refund": [
+    {
+      "id": "refund-1",
+      "input": {
+        "paid": 10000,
+        "refunded": 0,
+        "requested": 2000
+      },
+      "expected": 2000
+    },
+    {
+      "id": "refund-2",
+      "input": {
+        "paid": 10000,
+        "refunded": 2000,
+        "requested": 1000
+      },
+      "expected": 1000
+    },
+    {
+      "id": "refund-3",
+      "input": {
+        "paid": 10000,
+        "refunded": 0,
+        "requested": 10000
+      },
+      "expected": 10000
+    },
+    {
+      "id": "refund-4",
+      "input": {
+        "paid": 0,
+        "refunded": 0,
+        "requested": 0
+      },
+      "expected": 0
+    },
+    {
+      "id": "refund-5",
+      "input": {
+        "paid": 10000,
+        "refunded": 10000,
+        "requested": 1
+      },
+      "expected": 0
+    },
+    {
+      "id": "refund-6",
+      "input": {
+        "paid": 10000,
+        "refunded": 9999,
+        "requested": 2
+      },
+      "expected": 1
+    },
+    {
+      "id": "refund-7",
+      "input": {
+        "paid": 10000,
+        "refunded": 2000,
+        "requested": 8000
+      },
+      "expected": 8000
+    },
+    {
+      "id": "refund-8",
+      "input": {
+        "paid": 10000,
+        "refunded": 2000,
+        "requested": 8001
+      },
+      "expected": 8000
+    },
+    {
+      "id": "refund-9",
+      "input": {
+        "paid": 20000,
+        "refunded": 1,
+        "requested": 20000
+      },
+      "expected": 19999
+    },
+    {
+      "id": "refund-10",
+      "input": {
+        "paid": 1,
+        "refunded": 0,
+        "requested": 1
+      },
+      "expected": 1
+    },
+    {
+      "id": "refund-11",
+      "input": {
+        "paid": 1,
+        "refunded": 0,
+        "requested": 0
+      },
+      "expected": 0
+    },
+    {
+      "id": "refund-12",
+      "input": {
+        "paid": 20000,
+        "refunded": 20000,
+        "requested": 20000
+      },
+      "expected": 0
+    }
+  ],
+  "eligibility": [
+    {
+      "id": "eligibility-1",
+      "input": {
+        "age": 25,
+        "tenure": 12,
+        "suspended": false
+      },
+      "expected": true
+    },
+    {
+      "id": "eligibility-2",
+      "input": {
+        "age": 15,
+        "tenure": 2,
+        "suspended": false
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-3",
+      "input": {
+        "age": 30,
+        "tenure": 24,
+        "suspended": true
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-4",
+      "input": {
+        "age": 17,
+        "tenure": 6,
+        "suspended": false
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-5",
+      "input": {
+        "age": 18,
+        "tenure": 6,
+        "suspended": false
+      },
+      "expected": true
+    },
+    {
+      "id": "eligibility-6",
+      "input": {
+        "age": 19,
+        "tenure": 6,
+        "suspended": false
+      },
+      "expected": true
+    },
+    {
+      "id": "eligibility-7",
+      "input": {
+        "age": 18,
+        "tenure": 5,
+        "suspended": false
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-8",
+      "input": {
+        "age": 18,
+        "tenure": 7,
+        "suspended": false
+      },
+      "expected": true
+    },
+    {
+      "id": "eligibility-9",
+      "input": {
+        "age": 18,
+        "tenure": 6,
+        "suspended": true
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-10",
+      "input": {
+        "age": 0,
+        "tenure": 60,
+        "suspended": false
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-11",
+      "input": {
+        "age": 100,
+        "tenure": 0,
+        "suspended": false
+      },
+      "expected": false
+    },
+    {
+      "id": "eligibility-12",
+      "input": {
+        "age": 100,
+        "tenure": 60,
+        "suspended": false
+      },
+      "expected": true
+    }
+  ]
+}
