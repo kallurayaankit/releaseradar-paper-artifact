@@ -1,7 +1,7 @@
 ---
 title: "Reproducible regression testing evidence in two ReleaseRadar feasibility pilots"
 author: "Ankit Kalluraya"
-date: "Independent researcher · November 2026"
+date: "Independent researcher"
 lang: en-AU
 ---
 
@@ -19,7 +19,7 @@ MuTAP uses surviving mutants to guide language-model test generation [1]. TestGe
 
 The checkout fixture applies a free-shipping threshold to the subtotal after discounts, in integer cents. The affected rule was exercised against the correct implementation, the corrected implementation and seeded alternatives covering discount order, equality at the threshold and rounding. The copied fixture modules are exact extracts from the [pinned ReleaseRadar revision][fixture]. The release replay freezes each suite, checks both passing controls and records which alternatives fail under the same assertions.
 
-The exploratory starter suite contained [three cases](../results/study-a.json) and detected [one of three alternatives](../results/study-a.json), the threshold equality fault. The expanded suite retained the original tests, contained [six cases](../results/study-a.json), and detected [all three alternatives](../results/study-a.json). Codex prepared the additions during development with knowledge of the seeded faults. This is a known-fault replay; the case count differs between suites, and live model generation, browser rendering and deployment were not evaluated.
+The exploratory starter suite contained [three cases](../results/study-a.json) and detected [one of three alternatives](../results/study-a.json), the threshold equality fault. The expanded suite retained the original tests, used [six cases](../results/study-a.json) in total and detected [all three alternatives](../results/study-a.json). Codex prepared the additions during development with knowledge of the seeded faults. This is a known-fault replay; the case count differs between suites, and live model generation, browser rendering and deployment were not evaluated.
 
 ## Study B: separate synthetic companion harness
 
@@ -27,13 +27,13 @@ The companion harness covers discount, tax, refund and eligibility rules. It der
 
 The exploratory starter and expanded suites used [three and twelve cases per task](../results/study-b.json), respectively. Each result in the table counts detected implementations out of the eligible held-out implementations for that row. Oracle pairs are deterministic comparisons of the correct implementation against the independently derived rule code within the authored audit grid.
 
-| Task | Starter detected | Expanded detected | Oracle pairs |
-|:---|---:|---:|---:|
-| Discount | [2/3](../results/study-b.json) | [3/3](../results/study-b.json) | [20,001](../results/study-b.json) |
-| Tax | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [5,226](../results/study-b.json) |
-| Refund | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [15,872](../results/study-b.json) |
-| Eligibility | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [12,322](../results/study-b.json) |
-| **Total** | **[2/12](../results/study-b.json)** | **[12/12](../results/study-b.json)** | **[53,421](../results/study-b.json)** |
+| Task | Starter | Expanded | Oracle pairs | Study type |
+|:---|---:|---:|---:|:---|
+| Discount | [2/3](../results/study-b.json) | [3/3](../results/study-b.json) | [20,001](../results/study-b.json) | Exploratory |
+| Tax | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [5,226](../results/study-b.json) | Exploratory |
+| Refund | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [15,872](../results/study-b.json) | Exploratory |
+| Eligibility | [0/3](../results/study-b.json) | [3/3](../results/study-b.json) | [12,322](../results/study-b.json) | Exploratory |
+| **Total** | **[2/12](../results/study-b.json)** | **[12/12](../results/study-b.json)** | **[53,421](../results/study-b.json)** | Exploratory |
 
 In this exploratory replay, there were [zero oracle disagreements](../results/study-b.json) on the enumerated inputs. Only the discount and eligibility grids exhaust the specified domains. Tax samples inputs and does not cover fractional rounding in its audit grid; refund uses small balances. These comparisons are not independent statistical observations. In addition, held-out variants are distinct implementations, not necessarily distinct fault families.
 
