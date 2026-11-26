@@ -15,3 +15,15 @@ instruments = ["study-a/replay.mjs", "study-a/fixture/checkout.js", "study-a/fix
 [[results.depends]]
 file = "results/study-b.json"
 instruments = ["study-b/replay.mjs", "study-b/evaluate.mjs", "study-b/oracle.mjs", "study-b/faults.mjs", "study-b/oracle-selftest.mjs", "study-b/result-audit.mjs"]
+
+[[numbers.allow]]
+value = "24"
+file = "paper/manuscript.md"
+line = 48
+reason = "Node.js major version documented as a replay prerequisite in README.md; not an empirical result."
+
+[[numbers.allow]]
+value = "24"
+file = "paper/ReleaseRadar_Feasibility_Preprint.pdf"
+line = 2
+reason = "Node.js major version documented as a replay prerequisite in README.md; not an empirical result."
